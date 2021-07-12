@@ -1,21 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-class UserModel{
-  final int? id;
-  final String? name;
-  final String? phone;
-  UserModel({
-   @required this.id,
-  @required  this.name,
-   @required this.phone,
-});
-} // قاعدة بيانات تجريبيه
-class UsersScreen extends StatelessWidget {
-  List<UserModel> users = [ // 
+import 'package:salam/models/user/user_model.dart';
+
+class UsersScreen extends StatefulWidget {
+  @override
+  _UsersScreenState createState() => _UsersScreenState();
+}
+
+class _UsersScreenState extends State<UsersScreen> {
+  List<UserModel> users = [ //
     UserModel(id: 1, name: 'Abdelrahman Shaheen', phone: '01557882411'),
     UserModel(id: 2, name: 'Ahmed Adel', phone: '011548916556'),
     UserModel(id: 3, name: 'Mohammed Ali', phone: '01540814132'),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +31,7 @@ class UsersScreen extends StatelessWidget {
       )
     );
   }
+
   Widget usersItem(UserModel user) // استدعاء جدول القاعدة وتسميته باسم يوزر
   =>Padding(
     padding: const EdgeInsets.all(15.0),
