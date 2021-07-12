@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salam/modules/bmi/bmi_screen.dart';
+import 'package:salam/modules/login/login_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BmiScreen()
+      home: LoginScreen()
     );
   }
 }

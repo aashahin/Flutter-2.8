@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:salam/shared/components/components.dart';
 
 class  LoginScreen  extends StatefulWidget {
   @override
@@ -70,15 +71,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 15,
                 ),
-                Container(
-                  color: Colors.blue,
+                defaultButton(
+                  text: 'Login',
                   width: double.infinity,
-                  child: MaterialButton(onPressed: (){ // زر بخلفية
-                  print(emailController.text); // جلب البيانات من حقل البريد
-                  print(passwordController.text); // جلب البيانات من حقل كلمة المرور
-                  },
-                  child: Text('Login', style: TextStyle(color: Colors.white),),
-                  ),
+                  function: (){print('Hello');},
+                  background: Colors.blue,
+                  height: 50
                 ),
                 SizedBox(
                   height: 10,
