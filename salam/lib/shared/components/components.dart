@@ -9,6 +9,7 @@ Widget defaultButton({
 })=>Container(
   color: background,
   width: width,
+  height: height,
   child: MaterialButton(
     onPressed:function,
     child:
