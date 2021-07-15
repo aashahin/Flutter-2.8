@@ -1,95 +1,114 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:salam/shared/components/components.dart';
 
-class  LoginScreen  extends StatefulWidget {
+class  LoginScreen  extends StatefulWidget  {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  var emailController= TextEditingController(); // التحكم في حقل الايميل
-
-  var passwordController = TextEditingController(); // التحكم في حقل كلمة المرور
-
+  var emailController= TextEditingController();
+  var passwordController = TextEditingController();
+  var _formKey = GlobalKey<FormState>();
+  bool isPassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Center( // توسيط العناصر الموجوده به
+        child: Center(
           child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Login',
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w600,
-                ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                TextFormField(
-                  keyboardType:TextInputType.emailAddress ,
-                  controller: emailController, // التحكم في الحقل من خلال ربطه بزر التسجيل او الدخول لارسال البيانات للمطور
-                  onFieldSubmitted: (get){ // يرسل للمطور البيانات التي تم ادخالها في الحقل
-                    print(get);
-                  },
-                  onChanged: (test){print(test);}, // يرسل للمطور البيانات التي يتم اداخلها في حقل وسجل المستخدم في الحقل
-                  decoration: InputDecoration(
-                    labelText: 'Email Address',
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(
-                      Icons.email
-                    )
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Login',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
                   ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextFormField(
-                  keyboardType:TextInputType.visiblePassword ,
-                  controller: passwordController,
-                  obscureText: true, // اخفاء المحتوي
-                  onFieldSubmitted: (get){print(get);},
-                  onChanged: (test){print(test);},
-                  decoration: InputDecoration(
-                      labelText: 'Password',
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(
-                          Icons.lock
-                      ),
-                    suffixIcon: Icon( // ايقونة في نهاية الحقل
-                      Icons.remove_red_eye_outlined
-                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                defaultButton(
-                  text: 'Login',
-                  width: double.infinity,
-                  function: (){print('Hello');},
-                  background: Colors.blue,
-                  height: 40,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Don\'t have an account?'), // نضع باك سلاش حتي يقرأ الفاصلة كنص
-                    TextButton(onPressed: (){}, child: Text('Register')) // زر بدون خلفية
-                  ],
-                )
+                  SizedBox(
+                    height: 30,
+                  ),
+                  defaultFormField(
+                    label: 'Email Address',
+                   prefix: Icons.email,
+                    controller: emailController,
+                    type: TextInputType.emailAddress,
+                    validate: (value){
+                      if(value.isEmpty){
+                        return 'Email Address must not be empty';
+                      }
+                    }
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  defaultFormField(
+                    controller: passwordController,
+                    label: 'Password',
+                    type: TextInputType.visiblePassword,
+                    prefix: Icons.lock_open_outlined,
+                    // onChange: (test){print(test);},
+                    // onSubmit: (get){print(get);},
+                    validate: (value){
+                      if (value.isEmpty){
+                        return 'Password must not be empty';
+                      }
+                      // return null;
+                    },
+                      isPassword: isPassword,
+                    suffix:isPassword ?  Icons.visibility : Icons.visibility_off,
+                    suffixPressed: (){
+                      setState(() {
+                        isPassword = !isPassword;
 
-              ],
+                      });
+                    }
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  defaultButton(
+                    text: 'Login',
+                    function: (){
+                      if(_formKey.currentState!.validate()){
+                        print(emailController.text);
+                        print(passwordController.text);
+                      }
+                      },
+                    height: 40,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  defaultButton(
+                    text: 'Register',
+                    height: 40,
+                    radius: 10,
+                    isUppercase: true,
+                    function: (){
+                      print(emailController.text);
+                      print(passwordController.text);
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Don\'t have an account?'),
+                      TextButton(onPressed: (){}, child: Text('Register'))
+                    ],
+                  )
+
+                ],
+              ),
             ),
           ),
         ),
