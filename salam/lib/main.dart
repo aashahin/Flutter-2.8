@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:salam/modules/login/login_screen.dart';
+import 'package:salam/layout/home_layout.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen()
+      home: HomeLayout()
     );
   }
 }
