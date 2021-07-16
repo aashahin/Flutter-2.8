@@ -21,7 +21,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     'Done Tasks',
     'Archived Tasks'
   ];
-
+var database;
   @override
   void initState() {
     // TODO : DATABASE SQFLITE
@@ -96,7 +96,7 @@ getname().then((value) {
   }
   void createDatabase() async
   {
-    var database = await openDatabase(
+    database = await openDatabase(
       'todo.db',
       version: 1,
       onCreate:(database,version){
