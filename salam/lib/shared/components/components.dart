@@ -29,32 +29,34 @@ Widget defaultFormField({
   required dynamic label,
   required IconData prefix,
   IconData? suffix,
-  // Function? onSubmit,
-  // Function? onChange,
   bool isPassword = false,
   Function? suffixPressed,
+  VoidCallback? onTap,
+  Color colorField = Colors.black54,
+bool isClickable = true,
 }) =>
     TextFormField(
+      enabled: isClickable,
+      controller: controller,
       keyboardType: type,
       obscureText: isPassword,
-      // onFieldSubmitted: (get){
-      //   onSubmit!(get);
-      // },
-      // onChanged: (test){
-      //   onChange!(test);
-      // },
+      onTap: onTap,
       validator: (value){
         return validate!(value);
       },
       decoration: InputDecoration(
-        labelText: label,
+        hintText: label,
         border: OutlineInputBorder(),
-        prefixIcon: Icon(prefix),
+        focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: colorField)
+        ),
+        prefixIcon: Icon(prefix,color: colorField,),
         suffixIcon: IconButton(
-            onPressed: (){
-              suffixPressed!();
-            },
-            icon: Icon(suffix)),
+          onPressed: (){
+            suffixPressed!();
+          },
+          icon: Icon(suffix),
+        ),
       ),
 
     );

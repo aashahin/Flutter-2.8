@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:salam/modules/archived_tasks/archived_tasks_screen.dart';
 import 'package:salam/modules/done_tasks/done_tasks_screen.dart';
 import 'package:salam/modules/new_tasks/new_tasks_screen.dart';
+import 'package:salam/shared/components/components.dart';
 import 'package:sqflite/sqflite.dart';
 
 class HomeLayout extends StatefulWidget {
@@ -10,18 +12,27 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
-  int currentIndex = 0; // التحكم في كرنت اندكس من خلال انشاء متغيير ووضعه في قيمة كرنت اندكس
-  List<Widget> screens = [ // محتوي كل صفحة
+  int currentIndex = 0;
+  List<Widget> screens = [
     NewTasksScreen(),
     DoneTasksScreen(),
     ArchivedTasksScreen(),
   ];
-  List<String> titles = [ // عنوان كل صفحة والتنقل بينهم
+  List<String> titles = [
     'New Tasks',
     'Done Tasks',
     'Archived Tasks'
   ];
-var database;
+  late Database database;
+  var scaffoldKey = GlobalKey<ScaffoldState>();
+  bool isBottomSheetShown = false;
+  IconData febIcon = Icons.edit;
+  var titleController = TextEditingController();
+  var timeController = TextEditingController();
+  var dateController = TextEditingController();
+  var backgroundFloatBottom = Colors.deepPurpleAccent;
+  String toolTip = 'Add';
+  var formKey = GlobalKey<FormState>();
   @override
   void initState() {
     // TODO : DATABASE SQFLITE
@@ -31,45 +42,122 @@ var database;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
-        title: Text(titles[currentIndex]), // تغيير العنوان حسب رقم كل زر من خلال كرنت اندكس
+        title: Text(titles[currentIndex]),
         backgroundColor: Colors.deepPurpleAccent,
         elevation: 5,
         shadowColor: Colors.black,
       ),
       body: screens[currentIndex],
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.deepPurpleAccent,
-        onPressed: () async // نضع اسينك في حالة كان العنصر سيعمل في الخلفية ولا نضعها في الخاصية الثانية
-        {
-          // try{
-          //   var name = await getname(); // اويت أي انتظر في حالة كان يستلم بيانات فنعطيه هذه القيمة
-          //   print(name);
-          //   throw ('انشاء خطأ');
-          // } catch(error){ // رسالة الخطأ
-          //   print('error ${error.toString()}');
-          // }
-getname().then((value) {
-  var name = value;
-  print(name);
-  print('osama');
-  // الفرق بين الأول والثاني أن الأول قد تظهر النتيجية الثانيه في حال تاخرت الاولي بخللاف هذه تعرض كل في ترتيبه حتي وان تاخرت
-}
-).catchError((error){ // رسالة خطأ في حال فشل التنفيذ
-  print('error ${error.toString()}');
-}
-);
+        backgroundColor: backgroundFloatBottom,
+        tooltip:toolTip,
+        onPressed: () {
+          if(isBottomSheetShown){
+            if(formKey.currentState!.validate()){
+              insertToDatabase(
+                title: titleController.text,
+                time: timeController.text,
+                date: dateController.text,
+              ).then((value) {
+                Navigator.pop(context);
+                isBottomSheetShown = false;
+                setState(() {
+                  febIcon = Icons.edit;
+                  toolTip = 'Add';
+                });
+              });
+
+            }
+          }else{
+            scaffoldKey.currentState!.showBottomSheet((context) =>
+                Container(
+                  color: Colors.grey[50],
+                  padding:  EdgeInsets.all(20),
+                  child: Form(
+                    key: formKey,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        defaultFormField(controller: titleController,
+                            type: TextInputType.text,
+                            label: 'Task Title',
+                            prefix: Icons.title,
+                            colorField: Colors.deepPurpleAccent,
+                            validate: (String value){
+                              if(value.isEmpty){
+                                return 'title must not be empty';
+                              }
+                              return null;
+                            }
+                        ),
+                        SizedBox(height: 10),
+                        defaultFormField(controller: timeController,
+                            type: TextInputType.datetime,
+                            label: 'Task Time',
+                            colorField: Colors.deepPurpleAccent,
+                            prefix: Icons.watch_later_outlined,
+                            onTap: () {
+                              showTimePicker(context: context,
+                                  initialTime: TimeOfDay.now()
+                              ).then((dynamic value) {
+                                timeController.text = value.format(context);
+                              });
+                            },
+                            validate: (String value){
+                              if(value.isEmpty){
+                                return 'time must not be empty';
+                              }
+                              return null;
+                            }),
+                        SizedBox(height: 10),
+                        defaultFormField(
+                            controller: dateController,
+                            type: TextInputType.datetime,
+                            label: 'Task Date',
+                            colorField: Colors.deepPurpleAccent,
+                            prefix: Icons.calendar_today,
+                            onTap: () {
+                              showDatePicker(context: context,
+                                  initialDate: DateTime.now(),
+                                  firstDate: DateTime.now(),
+                                  lastDate: DateTime.parse('2021-10-07'),
+                              ).then((dynamic value) {
+                                dateController.text = DateFormat.yMMMd().format(value);
+                              });
+                            },
+                            validate: (String value){
+                              if(value.isEmpty){
+                                return 'date must not be empty';
+                              }
+                              return null;
+                            }),
+                      ],
+                    ),
+                  ),
+                )
+            );
+            isBottomSheetShown = true;
+            setState(() {
+
+              febIcon = Icons.close;
+              backgroundFloatBottom = Colors.deepPurpleAccent;
+              toolTip = 'Close';
+            });
+          }
+
         },
-        child: Icon(Icons.add),
+        child: Icon(febIcon),
         hoverColor: Colors.deepPurple,
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.deepPurpleAccent,
         currentIndex: currentIndex,
-        onTap: (index){ 
+        onTap: (index){
           setState(() {
-            currentIndex = index; // الانتقال من خيار لأخر
+            currentIndex = index;
           });
         },
         items: [
@@ -90,29 +178,42 @@ getname().then((value) {
       ),
     );
   }
-  Future<String> getname() async //فيوتشر : عنصر يعمل في الخلفية خاص بقاعدة البيانات وارسالها
+  Future<String> getname() async
   {
     return 'Ahmed';
   }
-  void createDatabase() async
-  {
+  void createDatabase() async {
     database = await openDatabase(
-      'todo.db',
-      version: 1,
-      onCreate:(database,version){
-        print('database created');
-        database.execute('CREATE TABLE tasks (id INTEGER PRIMARY KEY, title TEXT,date TEXT,time TEXT,status TEXT)').then((value) {
-          print('table created');
-        }).catchError((error){
-          print('Error When Creating Table ${error.toString()}');
-        });
-      },
-      onOpen: (database){
-        print('database opened');
-
-      }
+        'todo.db',
+        version: 1,
+        onCreate:(database,version){
+          print('database created');
+          database.execute('CREATE TABLE tasks (id INTEGER PRIMARY KEY, title TEXT,date TEXT,time TEXT,status TEXT)').then((value) {
+            print('table created');
+          }).catchError((error){
+            print('Error When Creating Table ${error.toString()}');
+          });
+        },
+        onOpen: (database){
+          print('database opened');
+        }
     );
   }
-  void insertToDatabase(){
+  Future insertToDatabase({
+   required String title,
+   required String time,
+    required String date,
+}) async{
+   return await database.transaction((txn) async  {
+      database.transaction((txn) async {
+        txn.rawInsert('INSERT INTO tasks (title,date,time,status) VALUES("$title", "$time", "$date", "new")'
+        ).then((value) {
+          print('inserted successful!');
+        }).catchError((error){
+          print('error 404 ${error.toString()}');
+        });
+      });
+      return null;
+    });
   }
 }
