@@ -30,7 +30,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   sqflite: ^2.0.0+3
   path: ^1.8.0
-
+  intl: ^0.17.0
+  flutter_conditional_rendering: ^2.0.0
+  google_fonts: ^2.1.0
+  bloc: ^7.0.0
+  flutter_bloc: ^7.0.1
+  url_launcher: ^6.0.9
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +54,8 @@ flutter:
 
   assets:
      - images/
+     - assets/
+
 
   # To add assets to your application, add an assets section, like this:
 
