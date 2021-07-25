@@ -1,46 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salam/modules/counter/cubit/cubit.dart';
+import 'package:salam/modules/counter/cubit/states.dart';
 
-class CounterScreen extends StatefulWidget { // نستخدم هذه الحالة في العناصر التفاعلية التي تتغيير
-  @override
-  _CounterScreenState createState() => _CounterScreenState();
-}
-
-class _CounterScreenState extends State<CounterScreen> {
-  int Counter = 1;
-@override
-  void initState() { // حتي تعمل Stateful
-    super.initState();
-  }
+class CounterScreen extends StatelessWidget { // نستخدم هذه الحالة في العناصر التفاعلية التي تتغيير
+  int counter = 1;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Counter'),
-      ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextButton(onPressed: (){
-              setState(() { // عنصر اعادة بناء حتي يتم تغيير النشاط المحدث في العنصر في حالة تفاعل المستخدم معه
-                Counter--;
-                print(Counter);
-              });
-
-            }, child: Text('MINUS')),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Text('$Counter',style: TextStyle(fontSize: 50,fontWeight: FontWeight.w900),),
+    return BlocProvider(
+      create: (BuildContext context) => CounterCubit(),
+      child: BlocConsumer<CounterCubit, CounterStates>(
+        listener: (context, state){
+          if(state is CounterMinusState){
+            print('minus state ${state.counter}');
+          }
+          if(state is CounterPlusState){
+            print('plus state ${state.counter}');
+          }
+        },
+        builder: (context, state){
+          return Scaffold(
+            appBar: AppBar(
+              title: Text('Counter'),
             ),
-            TextButton(onPressed: (){
-             setState(() { // عنصر اعادة بناء حتي يتم تغيير النشاط المحدث في العنصر في حالة تفاعل المستخدم معه
-               Counter++;
-               print(Counter);
-             });
-            }, child: Text('PLUS')),
+            body: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(onPressed: (){
+                    CounterCubit.get(context).minus();
+                  }, child: Text('MINUS')),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Text('${CounterCubit.get(context).counter}',style: TextStyle(fontSize: 50,fontWeight: FontWeight.w900),),
+                  ),
+                  TextButton(onPressed: (){
+                    CounterCubit.get(context).plus();
+                  }, child: Text('PLUS')),
 
-          ],
-        ),
+                ],
+              ),
+            ),
+          );
+        },
       ),
     );
   }
