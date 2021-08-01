@@ -1,10 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:salam/modules/archived_tasks/archived_tasks_screen.dart';
-import 'package:salam/modules/done_tasks/done_tasks_screen.dart';
-import 'package:salam/modules/new_tasks/new_tasks_screen.dart';
+import 'package:salam/modules/todo_app/archived_tasks/archived_tasks_screen.dart';
+import 'package:salam/modules/todo_app/done_tasks/done_tasks_screen.dart';
+import 'package:salam/modules/todo_app/new_tasks/new_tasks_screen.dart';
 import 'package:salam/shared/cubit/states.dart';
+import 'package:salam/shared/network/local/cache_helper.dart';
 import 'package:sqflite/sqflite.dart';
 
 class AppCubit extends Cubit<AppStates>{
@@ -116,4 +117,17 @@ class AppCubit extends Cubit<AppStates>{
     emit(AppChangeBottomSheetState());
   }
 
+  bool isDark = false;
+  void changeAppMode({bool? fromShared}){
+    if(fromShared != null){
+      isDark = fromShared;
+      emit(AppChangeAppModeState());
+    }
+    else {
+      isDark=!isDark;
+      CacheHelper.putBoolean(key: 'isDark', value: isDark).then((value) {
+        emit(AppChangeAppModeState());
+      });
+    }
+  }
 }

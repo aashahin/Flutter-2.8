@@ -1,0 +1,266 @@
+{
+  "status": "ok",
+  "totalResults": 70,
+  "articles": [
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Michelle Toh, CNN Business",
+      "title": "Bitcoin, dogecoin and ethereum are suddenly having another great week - CNN",
+      "description": "Cryptocurrencies rallied Monday, just a week after they were hit by a major sell-off.",
+      "url": "https://www.cnn.com/2021/07/26/investing/bitcoin-price-dogecoin-ethereum-intl-hnk/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/210725225614-bitcoin-illustration-0725-super-tease.jpg",
+      "publishedAt": "2021-07-26T09:22:00Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "the-verge",
+        "name": "The Verge"
+      },
+      "author": "Jon Porter",
+      "title": "Amazon reportedly has a ‘key’ to thousands of apartment buildings in US - The Verge",
+      "description": "Amazon’s Key for Business has been installed in thousands of buildings across the US. The company is reportedly pushing to get the system installed in more buildings, using a combination of free installations and gift cards.",
+      "url": "https://www.theverge.com/2021/7/26/22593871/amazon-key-for-business-thousands-of-buildings-us-installation-incentives-privacy-concerns",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/pXgcvN3sXXRryc_kaUR6xMHXMFw=/0x107:1487x886/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22740318/kfb_lp_en_desktop_pg004.jpg",
+      "publishedAt": "2021-07-26T09:17:08Z",
+      "content": "Said to be using gift cards to incentivise buildings to install its Key for Business system\r\nA promotional image for Amazon Key for Business.\r\nImage: Amazon\r\nAmazons Key for Business, a system that a… [+2189 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Vicky McKeever",
+      "title": "Treasury yields start the week lower with Fed meeting in focus - CNBC",
+      "description": "U.S. Treasury yields ebbed lower on Monday morning, with investor attention focused on the Federal Reserve two-day monetary policy meeting this week.",
+      "url": "https://www.cnbc.com/2021/07/26/us-bonds-treasury-yields-fall-with-fed-meeting-in-focus.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106862326-16172144421123-COUR-OB-Photo-20210331-Press-16-jpg?v=1617214578",
+      "publishedAt": "2021-07-26T07:59:54Z",
+      "content": "The Federal Open Market Committee's two-day meeting is due to begin on Tuesday, with a policy statement issued on Wednesday afternoon. \r\nOn Monday, the U.S. Department of Housing and Urban Developmen… [+376 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "NPR"
+      },
+      "author": "Jaclyn Diaz",
+      "title": "Philip Morris CEO Says It Will Stop Selling Cigarettes In The UK In 10 Years - NPR",
+      "description": "Tobacco giant Philip Morris International is pivoting away from cigarettes. Part of its reinvention plan is to stop selling cigarettes in the United Kingdom in the next 10 years.",
+      "url": "https://www.npr.org/2021/07/26/1020571339/marlboro-maker-ceo-says-the-company-plans-to-stop-selling-smokes-in-the-u-k",
+      "urlToImage": "https://media.npr.org/assets/img/2021/07/26/gettyimages-102300212_wide-f7920673369b29308b7ea2807a02b7a6ad60b6ee.jpg?s=1400",
+      "publishedAt": "2021-07-26T07:58:00Z",
+      "content": "In this 2010 file photo, a pack of Marlboro cigarettes is seen at the Quick Stop store in Miami, Fla. Philip Morris International's CEO Jacek Olczak said the company will stop selling Marlboro cigare… [+3615 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+      },
+      "author": "Oscar Williams-Grut",
+      "title": "Bitcoin and other cryptocurrencies surge on Amazon payments rumours - Yahoo Finance",
+      "description": "Amazon is recruiting for a 'Digital Currency and Blockchain Product Lead'  who will work in its Payment Acceptance & Experience Team.",
+      "url": "https://finance.yahoo.com/news/bitcoin-price-july-26-amazon-cryptocurrency-ethereum-dogecoin-cardarno-bitcoincash-073414758.html",
+      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/0JOmOQ.QoDZxvyOvYb2ZZg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzE3/https://s.yimg.com/os/creatr-uploaded-images/2021-07/7ff92bc0-ede2-11eb-bfff-1c03f9353481",
+      "publishedAt": "2021-07-26T07:34:14Z",
+      "content": "A recruitment ad by Amazon has stoked speculation the company may have a favourable view of cryptocurrencies. Photo: Artur Widak/NurPhoto via Getty Images\r\nBitcoin (BTC-USD) and other cryptocurrencie… [+3503 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "New York Times"
+      },
+      "author": "Kate Kelly, Lananh Nguyen",
+      "title": "Investment Banking Becomes Less Popular With Young Professionals - The New York Times",
+      "description": "As young professionals re-examine their work-life balance, investment banking is becoming a less popular choice despite the money.",
+      "url": "https://www.nytimes.com/2021/07/26/business/investment-banking-work-life-balance.html",
+      "urlToImage": "https://static01.nyt.com/images/2021/07/26/business/00Junior-Bankers-Iyoriobhe/00Junior-Bankers-Iyoriobhe-facebookJumbo.jpg",
+      "publishedAt": "2021-07-26T07:00:10Z",
+      "content": "Although top executives of the biggest banks have recently talked tough about the need for employees to return to the office, many are paying heed to the complaints of their youngest workers. Goldman… [+1830 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Silvia Amaro",
+      "title": "Budget airline Ryanair posts 273 million euro loss as Covid continues to wreak havoc - CNBC",
+      "description": "Low-cost airline Ryanair said Monday that it's still facing a \"challenging\" environment and that it might finish the fiscal year \"somewhere between a small loss and breakeven.\"",
+      "url": "https://www.cnbc.com/2021/07/26/ryanair-q1-2022-earnings.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106916517-1627277681986-gettyimages-1325387311-_dsc8721_20210625121603927.jpeg?v=1627277718",
+      "publishedAt": "2021-07-26T06:24:14Z",
+      "content": "LONDON Low-cost airline Ryanair said Monday that it's still facing a \"challenging\" environment and that it might finish the fiscal year \"somewhere between a small loss and breakeven\" as Covid-19 rest… [+1756 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+      },
+      "author": "Jeanny Yu",
+      "title": "China Stocks Tumble in ‘Panic Selling’ Amid Education Crackdown - Yahoo Finance",
+      "description": "(Bloomberg) -- A selloff in Chinese private education companies sent shockwaves through the equity market Monday, as investors scrambled to price in the...",
+      "url": "https://finance.yahoo.com/news/china-stocks-tumble-panic-selling-060406343.html",
+      "urlToImage": "https://s.yimg.com/uu/api/res/1.2/GIaomugzvwiCS8E.XQ3yFw--~B/aD0xMzMzO3c9MjAwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/bloomberg_markets_842/f162dfaf1b77074df3e6e4db897a1940",
+      "publishedAt": "2021-07-26T06:13:59Z",
+      "content": "(Bloomberg) -- A selloff in Chinese private education companies sent shockwaves through the equity market Monday, as investors scrambled to price in the growing risks from an intensifying crackdown b… [+3885 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "HYPEBEAST"
+      },
+      "author": "Sammy Su",
+      "title": "Doritos 'Puffy' Chip Discovery $20k USD Reward | HYPEBEAST - HYPEBEAST",
+      "description": "Finding a funky chip literally pays off.",
+      "url": "https://hypebeast.com/2021/7/doritos-offers-20000-usd-reward-rare-puffy-chip-discovery-info",
+      "urlToImage": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F07%2Fdoritos-offers-20000-usd-reward-rare-puffy-chip-discovery-info-tw.jpg?w=960&cbr=1&q=90&fit=max",
+      "publishedAt": "2021-07-26T06:04:30Z",
+      "content": "A video of a rare “puffy” Doritos chip recently went viral and the snack company offered a $20,000 USD reward to the Australian teen for her discovery and bold entrepreneurship.\r\n13-year-old Rylee St… [+1002 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Fox Business"
+      },
+      "author": "Associated Press",
+      "title": "US stocks trading lower hours ahead of Wall Street's opening bell - Fox Business",
+      "description": "U.S. equity futures are trading lower ahead of the Monday trading session on Wall Street.",
+      "url": "https://www.foxbusiness.com/markets/us-stocks-trading-lower-hours-ahead-of-wall-streets-opening-bell",
+      "urlToImage": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2018/02/0/0/ea01f225-stocks2.jpg?ve=1&tl=1",
+      "publishedAt": "2021-07-26T05:49:32Z",
+      "content": "U.S. equity futures\r\n are trading lower ahead of the Monday trading session on Wall Street.\r\nStocks in this Article\r\nOn Friday, the Dow, S&amp;P 500 and Nasdaq all finished with gains of better than … [+3904 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Fox Business"
+      },
+      "author": "The Wall Street Journal",
+      "title": "Covid-19 immunity wanes, but third shot still rarely needed, BioNTech CEO says - Fox Business",
+      "description": "Immunity against the coronavirus is waning in people who were fully vaccinated with the shot made by BioNTech SE and Pfizer Inc. in January because of the rapidly spreading Delta variant, BioNTech’s chief executive said, confirming data that emerged from Isra…",
+      "url": "https://www.foxbusiness.com/healthcare/covid-19-immunity-wanes-but-third-shot-still-rarely-needed-biontech-ceo-says",
+      "urlToImage": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2021/03/0/0/vaccine_generic2_cropped.jpg?ve=1&tl=1",
+      "publishedAt": "2021-07-26T05:22:07Z",
+      "content": "BERLIN — Immunity against the coronavirus is waning in people who were fully vaccinated with the shot made by BioNTech SE and Pfizer Inc. in January because of the rapidly spreading Delta variant, Bi… [+3854 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "Kelsey Vlamis",
+      "title": "Elizabeth Warren: If Jeff Bezos can go to space, he can pay more taxes - Business Insider",
+      "description": "\"He can afford to pitch in so everyone else gets a chance,\" Warren said, nodding to reports that Bezos paid $0 in income taxes for at least two years.",
+      "url": "https://www.businessinsider.com/elizabeth-warren-jeff-bezos-can-go-to-space-while-paycheck-2021-7",
+      "urlToImage": "https://i.insider.com/60fe405417cf960019ee0eae?width=1200&format=jpeg",
+      "publishedAt": "2021-07-26T05:18:00Z",
+      "content": "Sen. Elizabeth Warren tweeted Sunday about Jeff Bezos's recent space flight, saying that if he can afford to go to space he can afford to pay more in taxes.\r\n\"The richest guy on Earth can launch hims… [+1455 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Sam Meredith",
+      "title": "What to expect as Big Oil reports second-quarter earnings - CNBC",
+      "description": "Oil and gas majors are likely to report bumper second-quarter earnings in the coming days, energy analysts have told CNBC.",
+      "url": "https://www.cnbc.com/2021/07/26/what-to-expect-as-big-oil-reports-second-quarter-earnings.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106915770-1627019590367-gettyimages-1233942773-CALIFORNIA_OIL.jpeg?v=1627019707",
+      "publishedAt": "2021-07-26T05:16:36Z",
+      "content": "An oil pump jack operates at the Inglewood Oil Field in Culver City, California, U.S., on Sunday, July 11, 2021.\r\nLONDON Oil and gas majors are likely to report bumper second-quarter earnings in the … [+6886 chars]"
+    },
+    {
+      "source": {
+        "id": "fortune",
+        "name": "Fortune"
+      },
+      "author": "Bloomberg",
+      "title": "One of China’s first Bitcoin moguls thinks Chinese crypto trading will soon be ‘a thing of the past’ - Fortune",
+      "description": "Yet he warns that a high Bitcoin price may lead Beijing to ban the coin entirely.",
+      "url": "https://fortune.com/2021/07/26/china-bitcoin-crypto-ban-trading-peak-price/",
+      "urlToImage": "https://content.fortune.com/wp-content/uploads/2021/07/GettyImages-1233292362-e1627274960941.jpg?resize=1200,600",
+      "publishedAt": "2021-07-26T05:05:13Z",
+      "content": "Skip to Content"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "BBC News"
+      },
+      "author": "https://www.facebook.com/bbcnews",
+      "title": "Tencent shares slide after Beijing crackdown on music rights - BBC News",
+      "description": "China's market watchdog said the technology giant broke the country's anti-competition rules.",
+      "url": "https://www.bbc.com/news/business-57966023",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/99EF/production/_119570493_tv068553738.jpg",
+      "publishedAt": "2021-07-26T04:45:13Z",
+      "content": "image captionChina has been cracking down on technology companies in recent months\r\nShares in Tencent have fallen after China ordered the technology giant to end exclusive music licensing deals with … [+2628 chars]"
+    },
+    {
+      "source": {
+        "id": "usa-today",
+        "name": "USA Today"
+      },
+      "author": null,
+      "title": "'I quit': Workers are changing jobs at a record pace amid burnout, new openings with higher pay - USA TODAY",
+      "description": null,
+      "url": "https://www.usatoday.com/restricted/?return=https:%2F%2Fwww.usatoday.com%2Fstory%2Fmoney%2F2021%2F07%2F26%2Fchanging-jobs-americans-quit-work-record-pace-career-change%2F8062433002%2F",
+      "urlToImage": null,
+      "publishedAt": "2021-07-26T04:01:22Z",
+      "content": "Skip to main content\r\nThis content is only available to USA TODAY subscribers.\r\nSubscribe for as low as $4.99 per month.\r\nYour subscription includes access to:\r\nExclusive, subscriber-only content and… [+796 chars]"
+    },
+    {
+      "source": {
+        "id": "the-wall-street-journal",
+        "name": "The Wall Street Journal"
+      },
+      "author": "Rachel Feintzeig",
+      "title": "Make a Call on Quitting Your Job Without Any Regrets - The Wall Street Journal",
+      "description": "Plenty of workers want a fresh start now, but a new gig isn’t always the answer. Here are things to consider before firing off a farewell email.",
+      "url": "https://www.wsj.com/articles/quitting-your-job-resignation-11626975582",
+      "urlToImage": "https://images.wsj.net/im-372961/social",
+      "publishedAt": "2021-07-26T04:01:00Z",
+      "content": "It feels like everyones doing it.\r\nMore than 7.5 million workers quit their jobs in April and May, up from 4.3 million during the same period the year before. Everyones talking about fresh starts. Bu… [+820 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Saheli Roy Choudhury",
+      "title": "Are electric cars 'green'? The answer is yes, but it's complicated - CNBC",
+      "description": "Electric vehicles have surged in demand, and hit a record number last year as more and more people turn to battery-operated cars.",
+      "url": "https://www.cnbc.com/2021/07/26/lifetime-emissions-of-evs-are-lower-than-gasoline-cars-experts-say.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106910720-1626267580209-gettyimages-1287087627-dsc_9197_2020112260033371.jpeg?v=1626741975",
+      "publishedAt": "2021-07-26T04:00:25Z",
+      "content": "An electric vehicle charging point in Stoke-on-Trent, England.\r\nThe number of electric vehicles on the world's roads is surging, hitting a record number last year.\r\nThat would seem to be good news, a… [+9111 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Cointelegraph"
+      },
+      "author": "Martin Young",
+      "title": "FTX reduces max leverage from 101x to 20x to encourage ‘responsible trading’ - Cointelegraph",
+      "description": "As global regulators take aim at crypto, FTX has reduced its maximum leverage from 101x to 20x.",
+      "url": "https://cointelegraph.com/news/ftx-reduces-max-leverage-from-101x-to-20x-to-encourage-responsible-trading",
+      "urlToImage": "https://images.cointelegraph.com/images/1200_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjEtMDcvM2M0NzM4NjQtM2NlMS00OWRlLWIwYjgtY2I4MTk4MzVlOTAzLmpwZw==.jpg",
+      "publishedAt": "2021-07-26T03:53:41Z",
+      "content": "Crypto derivatives exchange FTX has decided to curb risky trading by limiting the leverage available to its users.\r\nThe exchange, founded by crypto billionaire Sam Bankman-Fried (SBF), has reducedthe… [+2434 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+      },
+      "author": "Reuters",
+      "title": "UPDATE 1-Bitcoin leaps 12% to test recent peaks, ether hits 3-week high - Yahoo Finance",
+      "description": "Cryptocurrencies popped to the top of recent ranges on Monday as short sellers bailed out in the wake of a strong week and while traders hoped a handful of...",
+      "url": "https://finance.yahoo.com/news/1-bitcoin-leaps-12-test-031823953.html",
+      "urlToImage": "https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo-1200x1200.png",
+      "publishedAt": "2021-07-26T03:21:21Z",
+      "content": "* BTC, ETH jump to the top of recent ranges as shorts squeezed\r\n* BTC strongest since June, ETH at three-week peak\r\n* Talk of Amazon acceptance, big investor remarks a help - brokers (Adds background… [+2017 chars]"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:salam/modules/counter/cubit/cubit.dart';
-import 'package:salam/modules/counter/cubit/states.dart';
+import 'package:salam/modules/BmiApp/counter/cubit/cubit.dart';
+import 'package:salam/modules/BmiApp/counter/cubit/states.dart';
 
 class CounterScreen extends StatelessWidget { // نستخدم هذه الحالة في العناصر التفاعلية التي تتغيير
   int counter = 1;

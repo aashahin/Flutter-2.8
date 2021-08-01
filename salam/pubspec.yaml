@@ -35,11 +35,17 @@ dependencies:
   google_fonts: ^2.1.0
   bloc: ^7.0.0
   flutter_bloc: ^7.0.1
-  url_launcher: ^6.0.9
+  dio: ^4.0.0
+  cached_network_image: ^3.1.0
+  hexcolor: ^2.0.4
+  shared_preferences: ^2.0.6
+  webview_flutter: ^2.0.10
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -53,8 +59,32 @@ flutter:
   uses-material-design: true
 
   assets:
-     - images/
-     - assets/
+    - assets/
+    - assets/images/ShopApp/onboarding_screen/
+
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/cairo/Cairo-Black.ttf
+        - asset: assets/fonts/cairo/Cairo-Bold.ttf
+        - asset: assets/fonts/cairo/Cairo-ExtraLight.ttf
+        - asset: assets/fonts/cairo/Cairo-Light.ttf
+        - asset: assets/fonts/cairo/Cairo-Regular.ttf
+        - asset: assets/fonts/cairo/Cairo-SemiBold.ttf
+    - family: ArefRuqaa
+      fonts:
+        - asset: assets/fonts/arefruqaa/ArefRuqaa-Bold.ttf
+        - asset: assets/fonts/arefruqaa/ArefRuqaa-Regular.ttf
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/tajawal/Tajawal-Black.ttf
+        - asset: assets/fonts/tajawal/Tajawal-Bold.ttf
+        - asset: assets/fonts/tajawal/Tajawal-ExtraBold.ttf
+        - asset: assets/fonts/tajawal/Tajawal-ExtraLight.ttf
+        - asset: assets/fonts/tajawal/Tajawal-Light.ttf
+        - asset: assets/fonts/tajawal/Tajawal-Medium.ttf
+        - asset: assets/fonts/tajawal/Tajawal-Regular.ttf
+
 
 
   # To add assets to your application, add an assets section, like this:
