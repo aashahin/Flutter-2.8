@@ -71,7 +71,7 @@ class _BmiScreenState extends State<BmiScreen> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Image.asset('images/female.png',width: 90,color:Colors.white), // تضمين صورة لكن يجب وضع مسارها في ملف بب سبيس
+                                Image.asset('images/female.png',width: 90,color:Colors.white),
                                 SizedBox(height: 10,),
                                 Text('Famle',style: TextStyle(fontSize: 30,color:Colors.white),)
                               ],
@@ -202,7 +202,7 @@ class _BmiScreenState extends State<BmiScreen> {
                                         age++;
                                       });
                                     },
-                                    heroTag: 'age++', // وصف للزر حتي يفرقهم المترجم اذا كان هناك اكثر من زر
+                                    heroTag: 'age++', 
                                     mini: true,
                                     backgroundColor: Colors.red,
                                     hoverColor: Colors.redAccent,
@@ -224,10 +224,10 @@ class _BmiScreenState extends State<BmiScreen> {
                   onPressed: (){
                     double result = weight / pow(height / 100, 2);
                     print(result.round());
-                    Navigator.push( // ارسال الي او الذهاب الي صفحة اخري / تنقل
+                    Navigator.push( 
                         context,
-                        MaterialPageRoute( // المكان الذاهب إليه
-                            builder: (context)=>BMIResultScreen( // نضع اوبجكت الصفحة المطلوب الإنتقال اليها
+                        MaterialPageRoute( 
+                            builder: (context)=>BMIResultScreen(
                               age: age..round(),
                               isMale: isMale,
                               result: result.round(),
